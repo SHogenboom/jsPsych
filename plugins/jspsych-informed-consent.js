@@ -14,7 +14,7 @@
 // The purpose of this document is to request active informed consent from participants.
 // They will first be presented with a information letter (as external html/pdf)
 // ... which they may also download for future reference.
-// They will then be presented with the consent questions 
+// They will then be presented with the consent questions
 // ... if consent is not provided the experiment will stop.
 
 // Initialize plugin
@@ -30,7 +30,7 @@ jsPsych.plugins["informed-consent"] = (function () {
     parameters: {
       // EXTERNAL WEBPAGE
       url: {
-        description: "A link to the external HTML page you wish to display.",
+        description: "A link to the (external) HTML/PDF you wish to display.",
         pretty_name: "URL",
         type: jsPsych.plugins.parameterType.STRING,
         default: undefined,
@@ -190,7 +190,7 @@ jsPsych.plugins["informed-consent"] = (function () {
       download_link = document.createElement("a");
       download_link.id = "jspsych-download-information-letter";
       download_link.href = trial.url;
-      download_link.target = "_blank"
+      download_link.target = "_blank";
 
       // Create the download button
       download_button = document.createElement("button");
